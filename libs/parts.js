@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
 exports.devServer = function(options) {
   return {
@@ -32,7 +33,8 @@ exports.devServer = function(options) {
       new webpack.HotModuleReplacementPlugin({
         multiStep: true
       })
-    ]
+    ],
+    postcss: ()=> [autoprefixer]
   };
 }
 
@@ -41,8 +43,8 @@ exports.setupCSS = function(paths) {
     module: {
       loaders: [
         {
-          test: /\.css$/,
-          loaders: ['style', 'css'],
+          test: /(\.css|\.scss)$/,
+          loaders: ['style', 'css?sourceMap', 'postcss', 'sass?sourceMap'],
           include: paths
         }
       ]
