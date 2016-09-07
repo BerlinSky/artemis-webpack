@@ -1,0 +1,115 @@
+$items: 16;
+
+// grid container
+.l-grid__container {
+  display: flex;
+  flex-flow: row wrap;
+
+  &--vertical {
+    flex-direction: column;
+  } 
+
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.l-grid {
+  // padding: 0.5rem;
+}
+
+// loop over the breakpoints
+@each $key, $value in $breakpoints {
+  @for $i from 1 through $items {
+    .l-grid__span--#{$key}-#{$i} {
+      // flex: 0 0 100%;
+      @include break($key) {
+        // @debug #{$i / $items * 100%}; 
+        flex: 0 0 #{$i / $items * 100%};
+      }
+    }
+
+    .l-grid__skip--#{$key}-#{$i} {
+      @include break($key) {
+	      // @debug #{$i / $items * 100%}; 
+        margin-left: #{$i / $items * 100%};
+      }
+    }
+  }
+}
+
+.grid__container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  &--secondary {
+    margin-bottom: 40px;
+  }
+
+  &--ruler {
+    border-bottom: 1px solid _color(site-default, grid-ruler);
+  }
+}
+
+.grid__row {
+  margin-bottom: 1.0rem;
+  @include break(md) {
+    // margin-bottom: inherit;
+  }
+
+  &--ruler {
+    // border-bottom: 1px solid _color(grid, ruler);
+  }
+
+  &--paddedSides {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+// grid table data
+.columnHeading {
+  &__dataLabel {
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include break(md) {
+      display: block;
+    }
+
+    &--numeric {
+      text-align: right;
+    }
+  }
+}
+
+.dataLabel {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @include break(md) {
+    display: none;
+  }
+}
+
+.dataValue {
+  font-size: 16px;
+  padding-left: 20px;
+
+  @include break(md) {
+    padding-left: 0;
+    font-size: 14px;
+  }
+
+  &--numeric {
+    text-align: left;
+
+    @include break(md) {
+      text-align: right;
+    }
+  }
+}

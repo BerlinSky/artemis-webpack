@@ -1,0 +1,121 @@
+.dataForm {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__section {
+    margin-top: 15px;
+    // margin-left: 35px;
+    // border: 3px solid transparent;
+    // border: 1px solid blue;
+    &--combo {
+      display: flex;
+    }
+  }
+
+  &__buttonPanel {
+    margin-top: 25px;
+  }
+
+  .dataInput {
+    // color: red;
+    width: 100%;
+  }
+
+  input {
+    margin-bottom: 8px;
+    // font-size: 14px;
+    // padding: 5px;
+    border: 0;
+    // width: 620px;
+    padding: 25px 25px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    max-width: 100%;
+    // border: 3px solid transparent;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+  }
+
+  input:focus, input:active {
+    outline: none;
+  }
+
+  .inputGroup {
+    position: relative;
+
+    &--country {
+      width: 45%;
+    }
+
+    &--state {
+      width: 35%;
+    }
+
+    &--zip {
+      width: 20%;
+      height: 70px;
+      margin-top: 0;
+      background-color: #fff;
+    }
+  }
+
+  .inputGroup label {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    transform: translateY(-50%);
+    font-style: italic;
+    // font-size: 14px;
+    font-size: 18px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.15s ease-out 0s;
+
+    &.dropdownlabel {
+      top: 20px;
+    }
+  }
+
+  .inputGroup .psudoLabel {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    transform: translateY(-50%);
+    font-style: italic;
+    // font-size: 14px;
+    font-size: 18px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.15s ease-out 0s;
+
+    &.dropdownlabel {
+      top: 20px;
+    }
+  }
+
+  .inputGroup input:focus + label,
+  .inputGroup input.js-userData + label {
+    top: 20px;
+    // font-size: 12px;
+    font-size: 16px;
+    color: #aaa;
+  }
+
+  .dropdownPanel {
+    background-color: #fff;
+    height: 70px;
+    padding-top: 30px;  
+    padding-left: 25px; 
+  }
+}
+
+
+

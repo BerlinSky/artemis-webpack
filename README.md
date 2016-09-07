@@ -4,6 +4,9 @@
 
 ### Features and Components
 Set up a starter kit 
+Process SASS with auto prefixer
+Support Source-maps
+Generate fav icons
 
 ##### #1 Clone the project
 
