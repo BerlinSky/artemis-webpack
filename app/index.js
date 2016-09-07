@@ -1,5 +1,9 @@
 require('./main.scss');
 
-var component = require('./component');
+import component from './component';
 
 document.body.appendChild(component());
+
+let name = 'Nice try';
+
+console.log('name', name);

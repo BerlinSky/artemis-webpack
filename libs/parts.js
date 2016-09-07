@@ -52,6 +52,37 @@ exports.setupCSS = function(paths) {
   };
 }
 
+exports.loadJS = function(include) {
+  return {
+    module: {
+      loaders: [
+        {
+          test: /\.(js|jsx)$/,
+          // Enable caching for extra performance
+          loaders: ['babel?cacheDirectory'],
+          include: include,
+          exclude: /node_modules/
+        }
+      ]
+    }
+  };
+}
+
+exports.lintJS = function(include) {
+  return {
+    module: {
+      preLoaders: [
+        {
+          test: /\.(js|jsx)$/,
+          loaders: ['eslint'],
+          include: include,
+          exclude: /node_modules/
+        }
+      ]
+    }
+  };
+}
+
 exports.minify = function() {
   return {
     plugins: [

@@ -36,7 +36,9 @@ switch(process .env.npm_lifecycle_event) {
       	devtool: 'source-map'
       },
 	    parts.minify(),
-      parts.setupCSS(PATHS.app)
+      parts.setupCSS(PATHS.app),
+      parts.loadJS(PATHS.app),
+      parts.lintJS(PATHS.app)
     );
 		break;
 	default:
@@ -46,6 +48,7 @@ switch(process .env.npm_lifecycle_event) {
       	devtool: 'eval-source-map'
       },
       parts.setupCSS(PATHS.app),
+      parts.loadJS(PATHS.app),
 	    parts.devServer({
 	      // Customize host/port here if needed
 	      host: process.env.HOST,
