@@ -3,10 +3,10 @@
 -- With Webpack and ES6
 
 ### Features and Components
-Set up a starter kit 
-Process SASS with auto prefixer
-Support Source-maps
-Generate fav icons
+1. Set up a starter kit 
+2. Process SASS with auto prefixer
+3. Support Source-maps
+4. Generate fav icons
 
 ##### #1 Clone the project
 
