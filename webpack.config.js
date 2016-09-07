@@ -9,7 +9,8 @@ const parts = require('./libs/parts');
 
 const PATHS = {
 	app: path.join(__dirname, 'app'),
-	build: path.join(__dirname, 'build')
+	build: path.join(__dirname, 'build'),
+	images: path.join(__dirname, 'app/images')
 };
 
 const common = {
@@ -41,6 +42,7 @@ switch(process .env.npm_lifecycle_event) {
 	    parts.minify(),
       parts.setupCSS(PATHS.app),
       parts.loadJS(PATHS.app),
+      parts.setupImages(),
       parts.lintJS(PATHS.app)
     );
 		break;
@@ -51,6 +53,7 @@ switch(process .env.npm_lifecycle_event) {
       	devtool: 'eval-source-map'
       },
       parts.setupCSS(PATHS.app),
+      parts.setupImages(),
       parts.loadJS(PATHS.app),
 	    parts.devServer({
 	      // Customize host/port here if needed

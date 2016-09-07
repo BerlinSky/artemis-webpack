@@ -1,7 +1,4 @@
-// require('./favicon.png');
-// import './favicon.png';
-
-import './main.scss';
+import './sass/main.scss';
 
 import component from './component';
 
