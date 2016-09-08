@@ -4,18 +4,18 @@
 @import "flexbox-grid";
 @import "main-content";
 @import "footer";
-// @import "site-cover";
-// @import "site-show";
 @import "search";
 @import "panel-container";
+@import "./search-bar/search-bar";
+@import "flexbox-table"	;
 // @import "media";
+// @import "site-cover";
+// @import "site-show";
 // @import "image";
 // @import "book-form";
 // @import "buttons";
 // @import "data-form";
 // @import "slide-show";
-@import "./search-bar/search-bar";
-@import "flexbox-table"	;
 // @import "./shopping-cart/cart";
 // @import "./shopping-cart/card";
 

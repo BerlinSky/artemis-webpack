@@ -1,9 +1,20 @@
 import './sass/main.scss';
+import $ from 'jquery';
 
-import component from './component';
+import { ApplicationBase } from './scripts/application/application-base';
+import { MainLayout } from './scripts/layout/main-layout';
 
-document.body.appendChild(component());
+export class App extends ApplicationBase {
+  constructor() {
+    super('My Book List');
 
-let name = 'Nice try';
+    this.createRoute('Home', MainLayout, true);
+    this.createRoute("Books");
+    this.createRoute("Authors");
+    this.createRoute("Clubs");
+    this.createRoute("Support");
+  }
+}
 
-console.log('name', name);
+export let application = new App();
+application.render($('body'));
