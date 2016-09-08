@@ -89,7 +89,8 @@ export class ApplicationBase {
     const searchInput = this.layout.component.find('.js-searchBar__inputText');
     const mainContentContainer = this.layout.component.find('.js-mainContentContainer');
 
-    searchButton.click(function() {
+    // searchButton.click(function() {
+    searchInput.keyup(function() {
       let searchResultContainer = mainContentContainer.find('.js-gridTable');
       searchResultContainer.remove();
 
