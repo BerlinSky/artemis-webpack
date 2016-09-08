@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const merge = require('webpack-merge');
 const validate = require('webpack-validator');
@@ -24,8 +24,8 @@ const common = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'Artemis Webpack'
-		}),
-		new FaviconsWebpackPlugin('./app/favicon.png')
+		})
+		// new FaviconsWebpackPlugin('./app/favicon.png')
 	]
 };
 
