@@ -1,7 +1,7 @@
 import { ApplicationBase } from './application/application-base';
 import { MainLayout } from './layout/main-layout';
 
-export class Main extends ApplicationBase {
+export class App extends ApplicationBase {
   constructor() {
     super('My Book List');
 
