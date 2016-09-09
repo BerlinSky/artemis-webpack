@@ -49,7 +49,7 @@ export class BookDataService {
 	}
 
 	_createBook(book) {
-		return new Book(book.isbn, book.author, book.title, book.publisher, book.pubdate, book.price)
+		return new Book(book.isbn, book.author, book.title, book.publisher, book.pubdate, book.price);
 	}
 }
 

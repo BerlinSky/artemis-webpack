@@ -1,11 +1,11 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 import { MainLayout } from '../layout/main-layout';
 import { Navigation } from '../ui-components/navigation';
 import { Footer } from '../ui-components/footer';
 
 import { SearchPanel } from '../ui-components/search-panel';
-import { BookSearchResult } from '../pages/book-search-result-partial.js';
+// import { BookSearchResult } from '../pages/book-search-result-partial.js';
 
 import { GridTable } from '../ui-components/grid-table';
 
@@ -35,7 +35,7 @@ export class ApplicationBase {
     this._appendSearchPanel();                                
     this._appendFooter();
 
-    this._attachSearchEvent()
+    this._attachSearchEvent();
   }
 
    _appendNavigation() {
@@ -57,7 +57,7 @@ export class ApplicationBase {
   }
 
   _attachSearchEvent() {
-    const searchButton = this.layout.component.find('.js-searchBar__button');
+    // const searchButton = this.layout.component.find('.js-searchBar__button');
     const searchInput = this.layout.component.find('.js-searchBar__inputText');
     const mainContentContainer = this.layout.component.find('.js-mainContentContainer');
 
@@ -73,7 +73,7 @@ export class ApplicationBase {
       const dataService = new BookDataService();
       dataService.populateData(books);
 
-      let bookList
+      let bookList;
       if (searchText === '*') {
         bookList = dataService.getBookListSortedByTitle();
       }
